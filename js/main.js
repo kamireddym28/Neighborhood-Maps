@@ -173,7 +173,7 @@ var ViewModel = function() {
 
 // setting animation for marker markerBounce
 function markerBounce(marker) {
-  if (marker.getAnimation() != null) {
+  if (marker.getAnimation() !== null) {
     marker.setAnimation(null);
   } else {
    marker.setAnimation(google.maps.Animation.BOUNCE);
@@ -203,14 +203,14 @@ function populateInfoWindow(marker, address, city_state, infowindow) {
     // In case the status is OK, which means the pano was found, compute the
     // position of the streetview image, then calculate the heading, then get a
     // panorama from that and set the options
-    function getStreetView(data, status) {
+    var getStreetView = function (data, status) {
       if (status == google.maps.StreetViewStatus.OK) {
         var nearStreetViewLocation = data.location.latLng;
         var heading = google.maps.geometry.spherical.computeHeading(
             nearStreetViewLocation, marker.position);
           infowindow.setContent('<h4>' + marker.title + '</h4>'+'<p>'+ address +
-                                '<br>'+city_state+'</p>'
-                                +'<div id="pano"></div>');
+                                '<br>'+city_state+'</p>'+
+                                '<div id="pano"></div>');
           var panoramaOptions = {
             position: nearStreetViewLocation,
             pov: {
@@ -222,10 +222,10 @@ function populateInfoWindow(marker, address, city_state, infowindow) {
           document.getElementById('pano'), panoramaOptions);
       } else {
         infowindow.setContent('<h4>' + marker.title + '</h4>'+'<p>'+ address +
-                              '<br>'+city_state+'</p>' +
+                              '<br>'+city_state+'</p>'+
                               '<div>No Street View Found</div>');
       }
-    };
+    }
     // Use streetview service to get the closest streetview image within
     // 50 meters of the markers position
     streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
