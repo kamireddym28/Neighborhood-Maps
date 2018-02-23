@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Neighborhood Map</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class = "container-fluid">
+      <div class = "row title">
+        <div class = "col-md-12 text-center">
+          <h2>Neighborhood Map</h2>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class = "container-fluid">
+      <div class = "row">
+		    <div class="neighborhood" id="neighborhood">
+    			<div class="mylocations" id="mylocations">
+            <div class="searchtab" id="searchtab">
+    			    <div class = "button" data-bind = "click: hamBurger">&#9776;</div>
+    			      <input class="filter-input" id="filter-input" placeholder = "Search location" data-bind="textInput: findLocation, valueUpdate: 'afterkeydown'" />
+    		     </div>
+      			 <ul class="results" id="results" data-bind="foreach: searchedLoc">
+      					<li class="places" id="places" data-bind="text: title, click: popMarker"></li>
+      				</ul>
+              <p class="footer text-center">Implemented using foursquare</p>
+    			</div>
+		      <div class="col-md-12 map" id="map"></div>
+        </div>
+		  </div>
+    </div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/lib/bootstrap.min.js"></script>
+  <script src="js/lib/knockout.min.js"></script>
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXwPzzSJQD8-4QSUDO1BQF_OlVZ024ZVI&libraries=places,geometry&v=3&callback=initMap" onerror="onLoadMapsError()">
+  </script>
+</body>
+</html>

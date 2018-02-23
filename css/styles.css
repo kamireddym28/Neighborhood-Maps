@@ -1,0 +1,125 @@
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  background-color: #000;
+  color: white;
+}
+
+.searchtab {
+  display: flex;
+	width: 100%;
+  padding-left: 15px;
+}
+
+.filter-input {
+	height: 50px;
+	font-size: 16px;
+	padding: 5px 20px;
+}
+
+.neighborhood {
+  display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.mylocations {
+	background-color: black;
+}
+
+.map {
+	background-color: #fff;
+	text-align: center;
+	height: 800px;
+}
+
+.results {
+	margin: 0;
+	padding: 0;
+}
+
+.places {
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    background-color: #42d7f4;
+    color: black;
+}
+
+.places:hover{
+	cursor: pointer;
+	background-color: #eef441;
+}
+
+.button {
+	width:0%;
+}
+
+#pano {
+    width: 200px;
+    height: 200px;
+}
+
+.footer {
+  color: gray;
+  padding: 5px 20px;
+  margin-top: 400px;
+  font-size: 10px;
+}
+
+@media only screen and (max-width : 950px)  {
+
+  .searchtab{
+  	position: relative;
+  	z-index: 1;
+  }
+
+  .button {
+  	width:10%;
+  	font-size: 20px;
+  	text-align: center;
+  	padding: 5px;
+  	box-sizing: border-box;
+    color: #fff;
+  	background-color: #000;
+  }
+
+  .neighborhood {
+  	flex-direction: column;
+  }
+
+  .clicked{
+    color: #000;
+  	background-color: #eef441;
+  }
+
+  .button:hover{
+  	cursor: pointer;
+    color: #000;
+  	background-color: #42d7f4;
+  }
+
+  .mylocations{
+  	height: 0;
+  }
+
+  .droponclick{
+  	height: 482px;
+  	position: relative;
+  	width: 100%;
+  	z-index: 1;
+  }
+
+  .filter-input, .mylocations {
+  	font-size: 24px;
+  }
+
+  #pano {
+      width: 200px;
+      height: 200px;
+  }
+
+}
