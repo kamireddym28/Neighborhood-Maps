@@ -34,7 +34,7 @@ Neighborhood Maps application is implemented using Google Maps API along side Fo
  
  #### Note:
  
- - API keys for Google Maps and Client ID, Client Secret for Foursquare API can obtained by registering the application in [google developer tools](https://developers.google.com/) and [foursuare developer tools](https://developer.foursquare.com/)
+ - API keys for Google Maps and Client ID, Client Secret for Foursquare API can obtained by registering the application in [google developer tools](https://developers.google.com/) and [foursquare developer tools](https://developer.foursquare.com/)
  
  
 
