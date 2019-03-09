@@ -4,7 +4,7 @@
  
 ## About
 
-Neighborhood Maps application is implemented using Google Maps API along side Foursquare API to retrive the data about locations of our choice. Application is buit such that it loads the information asynchronously and it using Knockout JS frame work which follows MVVM paradigm.
+Neighborhood Maps application is implemented using Google Maps API along side Foursquare API to retrive the data about locations of our choice. Application is built such that it loads the information asynchronously and it uses Knockout JS frame work which follows MVVM paradigm.
 
 ## Frameworks and APIs
 
